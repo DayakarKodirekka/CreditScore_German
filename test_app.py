@@ -34,7 +34,7 @@ def test_pred_loan():
         "Job": "A173",
         "Number_of_people_being_liable_to_provide_maintenance_for": 2,
         "Telephone":"A191",
-        "foreign_worker": "A201"
+        "foreign_worker": "A201",
     }
     with TestClient(app) as client:
         response = client.post("/predict_loan", json=payload)
