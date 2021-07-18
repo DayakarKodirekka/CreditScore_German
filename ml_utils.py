@@ -65,7 +65,7 @@ def load_model():
     print(f"Model trained with accuracy (Random Forest): {round(acc, 3)}")
 
 
-# function to predict the flower using the model
+# function to predict the risk loan using the model
 def predict(query_data):
     x = list(query_data.dict().values())
     prediction = clf.predict([x])[0]

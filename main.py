@@ -13,56 +13,55 @@ app.add_event_handler("startup", load_model)
 
 # class which is expected in the payload
 class QueryIn(BaseModel):
-
     Status_of_existing_checking_account: str
-    Duration_in_month:float
-    Credit_history: float
+    Duration_in_month: float
+    Credit_history: str
     Purpose: str
     Credit_amount: float
     Savings_account: str
     Present_employment: str
     Installment_rate_in_percentage_of_disposable_income: float
-    Personal_status_and_sex:str
-    Other_debtors_guarantors:str # remove the blackslash from the column
-    Present_residence_since:float
-    Property:str
-    Age_in_years:float
-    Other_installment_plans:str
-    Housing:str
-    Number_of_existing_credits_at_this_bank:float
-    Job:str
-    Number_of_people_being_liable_to_provide_maintenance_for:float
-    Telephone:str
-    foreign_worker:str
+    Personal_status_and_sex: str
+    Other_debtors_guarantors: str
+    Present_residence_since: float
+    Property: str
+    Age_in_years: float
+    Other_installment_plans: str
+    Housing: str
+    Number_of_existing_credits_at_this_bank: float
+    Job: str
+    Number_of_people_being_liable_to_provide_maintenance_for: float
+    Telephone: str
+    foreign_worker: str
 
 
 # class which is returned in the response
 class QueryOut(BaseModel):
-      risk:str # remove the "()" from the column
+      risk: str 
 
 # class which is expected in the payload while re-training
 class FeedbackIn(BaseModel):
     Status_of_existing_checking_account: str
-    Duration_in_month:float
-    Credit_history: float
+    Duration_in_month: float
+    Credit_history: str
     Purpose: str
     Credit_amount: float
     Savings_account_bonds: str
     Present_employment: str
     Installment_rate_in_percentage_of_disposable_income: float
-    Personal_status_and_sex:str
-    Other_debtors_guarantors:str # remove the blackslash from the column
-    Present_residence_since:float
-    Property:str
-    Age_in_years:float
-    Other_installment_plans:str
-    Housing:str
-    Number_of_existing_credits_at_this_bank:float
-    Job:str
-    Number_of_people_being_liable_to_provide_maintenance_for:float
-    Telephone:str
-    foreign_worker:str
-    risk:str
+    Personal_status_and_sex: str
+    Other_debtors_guarantors: str
+    Present_residence_since: float
+    Property: str
+    Age_in_years: float
+    Other_installment_plans: str
+    Housing: str
+    Number_of_existing_credits_at_this_bank: float
+    Job: str
+    Number_of_people_being_liable_to_provide_maintenance_for: float
+    Telephone: str
+    foreign_worker: str
+    risk: str
 
    
 # Route definitions
@@ -89,7 +88,7 @@ def feedback_loop(data: List[FeedbackIn]):
     return {"detail": "Feedback loop successful"}
 
 
-# # Main function to start the app when main.py is called
-# if __name__ == "__main__":
-#     # Uvicorn is used to run the server and listen for incoming API requests on 0.0.0.0:8888
-#     uvicorn.run("main:app", host="0.0.0.0", port=8888, reload=True)
+# Main function to start the app when main.py is called
+if __name__ == "__main__":
+    # Uvicorn is used to run the server and listen for incoming API requests on 0.0.0.0:8888
+    uvicorn.run("main:app", host="0.0.0.0", port=8888, reload=True)
