@@ -46,5 +46,5 @@ def substitute(df):
     df["foreign worker"]=df["foreign worker"].map(foreign_worker)
 
     risk={1:"Good Risk", 2:"Bad Risk"}
-    df["Cost Matrix(Risk)"]=df["Cost Matrix(Risk)"].map(risk)
+    df["risk"]=df["risk"].map(risk)
     return df
