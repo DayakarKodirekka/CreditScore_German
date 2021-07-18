@@ -20,11 +20,11 @@ def test_pred_loan():
         "Credit_history": "A33",
         "Purpose": "A40",
         "Credit_amount": 4870,
-        "Savings_account_bonds": "A61",
+        "Savings_account": "A61",
         "Present_employment": "A73",
         "Installment_rate_in_percentage_of_disposable_income": 3,
         "Personal_status_and_sex": "A93",
-        "Other_debtors_guarantors": "A101", # remove the blackslash from the column
+        "Other_debtors_guarantors": "A101",
         "Present_residence_since": 4,
         "Property": "A124",
         "Age_in_years": 53,

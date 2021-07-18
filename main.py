@@ -46,7 +46,7 @@ class FeedbackIn(BaseModel):
     Credit_history: str
     Purpose: str
     Credit_amount: float
-    Savings_account_bonds: str
+    Savings_account: str
     Present_employment: str
     Installment_rate_in_percentage_of_disposable_income: float
     Personal_status_and_sex: str
