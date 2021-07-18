@@ -41,9 +41,10 @@ def load_model():
     #Load the data using pandas read_csv method
     df= pd.read_csv('./output.csv', sep=" ",names=['Status_of_existing_checking_account', 'Duration_in_month','Credit_history', 'Purpose', 'Credit_amount', 'Savings_account','Present_employment','Installment_rate_in_percentage_of_disposable_income','Personal_status_and_sex','Other_debtors_guarantors','Present_residence_since','Property','Age_in_years','Other_installment_plans', 'Housing','Number_of_existing_credits_at_this_bank','Job','Number_of_people_being_liable_to_provide_maintenance_for', 'Telephone','foreign_worker', 'risk'])
     # split the data frame into inputs and outputs
-    last_ix = len(df.columns) - 1
-    X, y = df.drop(last_ix, axis=1), df[last_ix]
-
+    # last_ix = len(df.columns) - 1
+    # X, y = df.drop(last_ix, axis=1), df[last_ix]
+    X = df[['Status_of_existing_checking_account', 'Duration_in_month','Credit_history', 'Purpose', 'Credit_amount', 'Savings_account','Present_employment_since','Installment_rate_in_percentage_of_disposable_income','Personal_status_and_sex','Other_debtors_guarantors','Present_residence_since','Property','Age_in_years','Other_installment_plans', 'Housing','Number_of_existing_credits_at_this_bank','Job','Number_of_people_being_liable_to_provide_maintenance_for', 'Telephone','foreign_worker']]
+    y = df['risk']
     # Categorical features has to be converted into integer values for the model to process. 
     #This is done through one hot encoding.
     # select categorical features
