@@ -31,7 +31,7 @@ from credit_data_actual_values import substitute
 clf = RandomForestClassifier()
 
 # define the class encodings and reverse encodings
-classes = {1: "Good", 2: "Bad"}
+classes = {1: "Good Risk", 2: "Bad Risk"}
 r_classes = {y: x for x, y in classes.items()}
 
 # function to train and load the model during startup
