@@ -14,48 +14,26 @@ app.add_event_handler("startup", load_model)
 # class which is expected in the payload
 class QueryIn(BaseModel):
 
-    # Status_of_existing_checking_account: str
-    # Duration_in_month:float
-    # Credit_history: float
-    # Purpose: str
-    # Credit_amount: float
-    # Savings_account: str
-    # Present_employment: str
-    # Installment_rate_in_percentage_of_disposable_income: float
-    # Personal_status_and_sex:str
-    # Other_debtors_guarantors:str # remove the blackslash from the column
-    # Present_residence_since:float
-    # Property:str
-    # Age_in_years:float
-    # Other_installment_plans:str
-    # Housing:str
-    # Number_of_existing_credits_at_this_bank:float
-    # Job:str
-    # Number_of_people_being_liable_to_provide_maintenance_for:float
-    # Telephone:str
-    # foreign_worker:str
-
-    Status_of_existing_checking_account: any
+    Status_of_existing_checking_account: str
     Duration_in_month:float
     Credit_history: float
-    Purpose: any
+    Purpose: str
     Credit_amount: float
-    Savings_account: any
-    Present_employment: any
+    Savings_account: str
+    Present_employment: str
     Installment_rate_in_percentage_of_disposable_income: float
-    Personal_status_and_sex:any
-    Other_debtors_guarantors:any # remove the blackslash from the column
+    Personal_status_and_sex:str
+    Other_debtors_guarantors:str # remove the blackslash from the column
     Present_residence_since:float
-    Property:any
+    Property:str
     Age_in_years:float
-    Other_installment_plans:any
-    Housing:any
+    Other_installment_plans:str
+    Housing:str
     Number_of_existing_credits_at_this_bank:float
-    Job:any
+    Job:str
     Number_of_people_being_liable_to_provide_maintenance_for:float
-    Telephone:any
-    foreign_worker:any
-    
+    Telephone:str
+    foreign_worker:str
 
 
 # class which is returned in the response
@@ -64,50 +42,29 @@ class QueryOut(BaseModel):
 
 # class which is expected in the payload while re-training
 class FeedbackIn(BaseModel):
-    # Status_of_existing_checking_account: str
-    # Duration_in_month:float
-    # Credit_history: float
-    # Purpose: str
-    # Credit_amount: float
-    # Savings_account_bonds: str
-    # Present_employment: str
-    # Installment_rate_in_percentage_of_disposable_income: float
-    # Personal_status_and_sex:str
-    # Other_debtors_guarantors:str # remove the blackslash from the column
-    # Present_residence_since:float
-    # Property:str
-    # Age_in_years:float
-    # Other_installment_plans:str
-    # Housing:str
-    # Number_of_existing_credits_at_this_bank:float
-    # Job:str
-    # Number_of_people_being_liable_to_provide_maintenance_for:float
-    # Telephone:str
-    # foreign_worker:str
-    # risk:str
-
-    Status_of_existing_checking_account: any
+    Status_of_existing_checking_account: str
     Duration_in_month:float
     Credit_history: float
-    Purpose: any
+    Purpose: str
     Credit_amount: float
-    Savings_account: any
-    Present_employment: any
+    Savings_account_bonds: str
+    Present_employment: str
     Installment_rate_in_percentage_of_disposable_income: float
-    Personal_status_and_sex:any
-    Other_debtors_guarantors:any # remove the blackslash from the column
+    Personal_status_and_sex:str
+    Other_debtors_guarantors:str # remove the blackslash from the column
     Present_residence_since:float
-    Property:any
+    Property:str
     Age_in_years:float
-    Other_installment_plans:any
-    Housing:any
+    Other_installment_plans:str
+    Housing:str
     Number_of_existing_credits_at_this_bank:float
-    Job:any
+    Job:str
     Number_of_people_being_liable_to_provide_maintenance_for:float
-    Telephone:any
-    foreign_worker:any
-    risk:any
+    Telephone:str
+    foreign_worker:str
+    risk:str
 
+   
 # Route definitions
 @app.get("/ping")
 # Healthcheck route to ensure that the API is up and running
