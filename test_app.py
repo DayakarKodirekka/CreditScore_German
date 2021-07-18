@@ -15,7 +15,7 @@ def test_ping():
 def test_pred_loan():
     # defining a sample payload for the testcase
     payload = {
-        "Status_of_existing_checking_account": 'A11',
+        "Status_of_existing_checking_account": "A11",
         "Duration_in_month": 24,
         "Credit_history": "A33",
         "Purpose": "A40",

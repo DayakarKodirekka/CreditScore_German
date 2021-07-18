@@ -89,7 +89,7 @@ def feedback_loop(data: List[FeedbackIn]):
     return {"detail": "Feedback loop successful"}
 
 
-# Main function to start the app when main.py is called
-if __name__ == "__main__":
-    # Uvicorn is used to run the server and listen for incoming API requests on 0.0.0.0:8888
-    uvicorn.run("main:app", host="0.0.0.0", port=8888, reload=True)
+# # Main function to start the app when main.py is called
+# if __name__ == "__main__":
+#     # Uvicorn is used to run the server and listen for incoming API requests on 0.0.0.0:8888
+#     uvicorn.run("main:app", host="0.0.0.0", port=8888, reload=True)
