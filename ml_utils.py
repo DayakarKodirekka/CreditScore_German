@@ -44,6 +44,17 @@ def load_model():
     last_ix = len(df.columns) - 1
     X, y = df.drop(last_ix, axis=1), df[last_ix]
 
+    # Categorical features has to be converted into integer values for the model to process. 
+    #This is done through one hot encoding.
+    # select categorical features
+    cat_ix = X.select_dtypes(include=['object', 'bool']).columns
+    # one hot encode categorical features only
+    ct = ColumnTransformer([('o',OneHotEncoder(),cat_ix)], remainder='passthrough')
+    X = ct.fit_transform(X)
+    # label encode the target variable to have the classes 0 and 1
+    y = LabelEncoder().fit_transform(y)
+    # print(X.shape, y.shape, Counter(y))
+
     # do the test-train split and train the model
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
     clf.fit(X_train, y_train)
