@@ -49,7 +49,7 @@ class FeedbackIn(BaseModel):
     Purpose: str
     Credit_amount: float
     Savings_account_bonds: str
-    Present_employment_since: str
+    Present_employment: str
     Installment_rate_in_percentage_of_disposable_income: float
     Personal_status_and_sex:str
     Other_debtors_guarantors:str # remove the blackslash from the column

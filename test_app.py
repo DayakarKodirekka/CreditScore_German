@@ -21,7 +21,7 @@ def test_pred_loan():
         "Purpose": "A40",
         "Credit_amount": 4870,
         "Savings_account_bonds": "A61",
-        "Present_employment_since": "A73",
+        "Present_employment": "A73",
         "Installment_rate_in_percentage_of_disposable_income": 3,
         "Personal_status_and_sex": "A93",
         "Other_debtors_guarantors": "A101", # remove the blackslash from the column
