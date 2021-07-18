@@ -4,9 +4,9 @@ pytest==6.2.4
 requests==2.25.1
 pandas==1.2.4
 scikit-learn==0.24.1
-!pip install numpy
+numpy
 # !pip install pandas
 # !pip install scikit-learn
-!pip install matplotlib
-!pip install collections
-!pip install gdown
+matplotlib
+# collections
+# !pip install gdown
